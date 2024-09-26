@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Template String</title>
+    </head>
+    <body>
+        <ul>
+            <li>Name : Aung Aung</li>
+            <li>Age : 25</li>
+            <li>Job : Web Developer</li>
+            <li>City : Yangon</li>
+        </ul>
+
+        <script type="text/javascript">
+            // var fullname; // oki = undefined
+            // let fullname; // oki = undefined
+            // const fullname; // error
+            // console.log(fullname);
+
+            const name = "Honey Nway Oo";
+            const age = 23;
+            const job = "Model";
+            const city = "Yangon";
+
+            document.write(name);
+            document.write(age);
+            document.write(job);
+            document.write(city);
+
+            let myliststyle;
+            // console.log(myliststyle);
+
+            // myliststyle = "<h1>Hello World</h1>";
+            // myliststyle = "<h1>Hello Global</h1>";
+            // myliststyle = "<h1>Hello Human</h1>";
+
+            // console.log(myliststyle); // <h1>Hello World</h1>
+
+            // Without Template String
+
+            myliststyle =
+                "<ul>" +
+                "<li>Name : " +
+                name +
+                "</li>" +
+                "<li>Age : " +
+                age +
+                "</li>" +
+                "<li>Job : " +
+                job +
+                "</li>" +
+                "<li>City : " +
+                city +
+                "</li>" +
+                "</ul>";
+
+            document.write(myliststyle);
+
+            // Template Sting (``)
+
+            myliststyle = `
+                <ul>
+                    <li>Name : ${name}</li>
+                    <li>Age : ${age}</li>
+                    <li>Job : ${job}</li>
+                    <li>City : ${city}</li>
+                </ul>
+                `;
+
+            document.write(myliststyle);
+        </script>
+    </body>
+</html>

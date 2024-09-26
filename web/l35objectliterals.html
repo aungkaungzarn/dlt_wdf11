@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object Literals</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            let students = {
+                firstname: "Honey",
+                middlename: "Nway",
+                lastname: "Oo",
+                age: "22",
+            };
+
+            console.log(students);
+            console.info(students);
+            console.table(students);
+            console.log(typeof students); // Object
+
+            console.log(students.firstname); // Honey
+            console.log(students.middlename); // Nway
+            console.log(students.lastname); // Oo
+            console.log(students.age); // 22
+
+            console.log(typeof students.firstname); // string
+            console.log(typeof students.age); // number
+
+            const persons = {
+                firstname: "Kyaw Kyaw",
+                lastname: "Htay Lwin",
+                age: 43,
+                single: false,
+                email: "kyawkyaw@gmail.com",
+                address: {
+                    street: "62st",
+                    township: "Alone",
+                },
+                hometown: {
+                    city: "Yangon",
+                },
+                hobbies: ["sleep", "eat", "code", "music", "sport"],
+            };
+
+            console.log(persons);
+            console.table(persons);
+
+            console.log(persons.firstname);
+            console.log(persons.age);
+            console.log(persons.single);
+
+            console.log(persons.hometown);
+            console.log(persons.hometown.city);
+
+            console.log(persons.address);
+            console.log(persons.address.street);
+            console.log(persons.address.township);
+
+            console.log(persons.hobbies);
+            console.log(persons.hobbies[2]);
+            console.log(persons.hobbies[4]);
+            console.log(persons.hobbies.length);
+            console.log(persons.hobbies[5 - 1]);
+            console.log(persons.hobbies[persons.hobbies.length - 1]);
+        </script>
+    </body>
+</html>

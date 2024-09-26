@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date and Time</title>
+    </head>
+    <body>
+        <div>
+            <small>
+                &copy; <span id="autoyear">Hello</span> Cable News Network. A
+                Warner Bros. Discovery Company. All Rights Reserved.
+            </small>
+        </div>
+        <script type="text/javascript">
+            let mydate = new Date(); // class object
+            console.log(mydate); // Wed Sep 18 2024 20:32:57 GMT+0630 (Myanmar Time)
+            console.log(typeof mydate); // object
+            console.log(new Date()); // Wed Sep 18 2024 20:33:12 GMT+0630 (Myanmar Time)
+
+            let getdate = new Date().getDate(); // method
+            console.log(getdate); // 18
+
+            let hour = new Date().getHours();
+            console.log(hour); // 20
+
+            let minute = new Date().getMinutes();
+            console.log(minute); // 42
+
+            let second = new Date().getSeconds();
+            console.log(second); // 40
+
+            let millisecond = mydate.getMilliseconds();
+            console.log(millisecond); // 843
+
+            // 1s = 1000ms
+            // 1 jan 1970 > uptonow
+
+            let time = mydate.getTime();
+            console.log(time); // 1726669852060
+
+            let now = Date.now();
+            console.log(now); // 1726669852061
+
+            //    0     1     2     3     4     5     6     7     8     9      10  11
+            // ['jan','feb','mar','apr','may','jun','jul','aug','sep','nov','dec']
+            let month = mydate.getMonth();
+            console.log(month);
+
+            // m d y hr:m:s
+            let birthday = new Date("7-10-2020"); // Fri Jul 10 2020 00:00:00 GMT+0630 (Myanmar Time)
+            birthday = new Date("8-1-2023 11:35:01");
+            birthday = new Date("Aug-2-2023 11:35:01");
+            birthday = new Date("Aug 2 2023 11:35:01");
+            birthday = new Date("Jul 1 2023 11:35:01");
+            birthday = new Date("Aug 1 2023 11:35:01");
+            birthday = new Date("5/10/2023 11:35:01");
+
+            console.log(birthday);
+            console.log(birthday.getMonth()); // 4
+
+            birthday.setMonth(2);
+            birthday.setDate(15);
+            birthday.setFullYear(2024);
+            birthday.setHours(15);
+            birthday.setMinutes(50);
+            birthday.setSeconds(59);
+
+            console.log(birthday);
+        </script>
+    </body>
+</html>
